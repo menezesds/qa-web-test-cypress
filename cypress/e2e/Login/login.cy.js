@@ -1,7 +1,5 @@
 /// <reference types="Cypress"/>
-
-
-describe('Functional Login Test', () => {
+describe('Functional Test: Login', () => {
     it('Should redirect to products page after successul login with correct username and password', () => {
         cy.visit("https://www.saucedemo.com/")
         cy.get('[data-test="username"]').type("standard_user")
@@ -24,7 +22,6 @@ describe('Functional Login Test', () => {
         cy.get('[data-test="login-button"]').click()
         cy.get('.error-message-container').should('contain', 'Epic sadface: Username and password do not match any user in this service')
     });
-
     it('Should return failure when logging in with empty password', () => {
         cy.visit("https://www.saucedemo.com/")
         cy.get('[data-test="username"]').type("standard_user")
