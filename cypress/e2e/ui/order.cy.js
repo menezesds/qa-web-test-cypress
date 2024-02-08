@@ -1,5 +1,5 @@
 /// <reference types="Cypress"/>
-describe('E2E Test: Order', () => {
+describe('UI E2E Test: Order', () => {
     it('Order with success flow', () => {
         //Login
         cy.login_test('standard_user', 'secret_sauce')

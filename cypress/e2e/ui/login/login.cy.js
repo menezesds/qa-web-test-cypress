@@ -1,5 +1,5 @@
 /// <reference types="Cypress"/>
-describe('Functional Test: Login', () => {
+describe('UI Functional Test: Login', () => {
     it('Should redirect to products page after successul login with correct username and password', () => {
         cy.login_test('standard_user', 'secret_sauce')
         cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
